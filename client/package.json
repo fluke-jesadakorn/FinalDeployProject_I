@@ -31,7 +31,8 @@
     "client": "set PORT=5005 && react-scripts start",
     "server": "cd backend && nodemon 03_server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "set PORT=5005 && react-scripts start"
+    "start": "set PORT=5005 && react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
