@@ -31,7 +31,7 @@
     "client": "set PORT=5005 && react-scripts start",
     "server": "cd backend && nodemon 03_server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js"
+    "start": "set PORT=5005 && react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,5 +51,5 @@
   "engines": {
     "node": "13.2.0"
   },
-  "heroku-postbuild": "npm run client"
+  "proxy": "http://localhost"
 }
