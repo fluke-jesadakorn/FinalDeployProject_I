@@ -16,9 +16,9 @@
   },
   "scripts": {
     "client": "npm start --prefix client",
-    "server": "nodemon 03_server.js",
+    "server": "node 03_server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "nodemon 03_server.js"
+    "start": "node 03_server.js"
   },
   "engines": {
     "node": "13.2.0"
