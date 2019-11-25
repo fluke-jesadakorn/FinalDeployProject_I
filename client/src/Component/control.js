@@ -14,7 +14,7 @@ export default class Control extends Component {
     sendswitch = () => {
         const { sw1 } = this.state
         this.setState({sw1:!sw1})
-        axios.post('http://localhost:5004/api/button/', {
+        axios.post('api/button/', {
             command: sw1
         })
     }
