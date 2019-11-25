@@ -2,6 +2,7 @@
   "name": "smartfarm",
   "version": "0.1.0",
   "private": true,
+  "main": "03_server.js",
   "dependencies": {
     "axios": "^0.19.0",
     "concurrently": "^5.0.0",
