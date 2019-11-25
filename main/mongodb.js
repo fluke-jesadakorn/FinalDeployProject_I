@@ -84,9 +84,10 @@ function database() {
     SendSw.sendBtSwToLine(req.body.command)
   })
 
-  if (process.env.NODE_ENV === 'production') {
-    app.use(express.static("client/build"))
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   app.use(express.static("client/build"))
+  // }
+  app.use(express.static("client/build"))
   // append /api for our http requests
   app.use('/api', router);
 
