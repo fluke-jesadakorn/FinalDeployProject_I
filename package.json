@@ -1,5 +1,5 @@
 {
-  "name": "fulltype",
+  "name": "smartfarm",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,18 +19,6 @@
     "server": "node 03_server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node 03_server.js"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "engines": {
     "node": "13.2.0"

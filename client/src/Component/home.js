@@ -19,7 +19,7 @@ export default class Home extends React.Component {
   }
 
   getData = () => {
-    axios.get('api/getData')
+    axios.get('/api/getData')
       .then(async (res) => {
         let fromGetData = res.data
         let datas = fromGetData.map((data) => { return data })
@@ -30,14 +30,14 @@ export default class Home extends React.Component {
 
   addData = async () => {
     let rand = Math.random()
-    await axios.post("api/addData", { data: rand })
+    await axios.post("/api/addData", { data: rand })
   }
 
   deleteData = async (index) => {
     let listId = await this.state.data.map((Id) => { return Id.id })
     await console.log(listId)
     await console.log(index)
-    axios.delete("api/deleteData", { data: { params: listId[index] } })
+    axios.delete("/api/deleteData", { data: { params: listId[index] } })
       .catch((err) => {
         console.log("Not Found Index : " + err)
       })
