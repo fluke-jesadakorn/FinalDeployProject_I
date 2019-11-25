@@ -28,10 +28,10 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "client": "set PORT=5005 && react-scripts start --prefix client",
-    "server": "node 03_server.js",
+    "client": "set PORT=5005 && react-scripts start",
+    "server": "cd backend && nodemon 03_server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node 03_server.js"
+    "start": "node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,5 +51,5 @@
   "engines": {
     "node": "13.2.0"
   },
-  "heroku-postbuild" : "npm run client --prefix client"
+  "heroku-postbuild": "npm run client"
 }
