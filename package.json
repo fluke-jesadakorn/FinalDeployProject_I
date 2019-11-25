@@ -23,5 +23,5 @@
   "engines": {
     "node": "13.2.0"
   },
-  "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  "heroku-prebuild": "npm install --prefix client && npm run build --prefix client"
 }
