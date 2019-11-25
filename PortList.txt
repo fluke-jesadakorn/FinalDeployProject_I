@@ -1,0 +1,6 @@
+Database = 5000
+Socket.io = 5001
+Back = 5002
+NB-IoT = 5003
+Front = 5004
+LineServer = 5006

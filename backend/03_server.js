@@ -1,0 +1,10 @@
+var nbserver = require('./main/nbserver')
+var store = require('./main/store')
+var database = require('./main/mongodb')
+var line = require('./main/lineAPI')
+
+//realtimegraph.server()
+nbserver.listen()
+//setInterval(()=>{console.log('temp : ' + store.temp)},5000)
+database.database()
+line.line()
