@@ -55,8 +55,8 @@ function database() {
   // this method removes existing data in our database
   router.delete('/deleteData', async (req, res) => {
     let deleteIndex = await req.body.params
-    await SchemaFarm.remove({ id: deleteIndex })
-    res.status(200).json({ status: "success" })
+    await SchemaFarm.deleteOne({ id: deleteIndex })
+    await res.status(200).json({ status: "success" })
   });
 
   // this is our create methid
@@ -83,6 +83,10 @@ function database() {
   router.post('/button', (req, res) => {
     SendSw.sendBtSwToLine(req.body.command)
   })
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static("client/build"))
+  }
   // append /api for our http requests
   app.use('/api', router);
 

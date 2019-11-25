@@ -10,7 +10,3 @@ nbserver.listen()
 //setInterval(()=>{console.log('temp : ' + store.temp)},5000)
 database.database()
 line.line()
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static("client/build"))
-}
