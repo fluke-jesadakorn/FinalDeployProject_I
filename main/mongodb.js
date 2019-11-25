@@ -16,7 +16,7 @@ function database() {
 
   // this is our MongoDB database
   const dbRoute =
-    'mongodb://61.19.181.29:5000/SmartFarm';
+    'mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm';
 
   // connects our back end code with the database
   mongoose.connect(dbRoute, { useNewUrlParser: true });
