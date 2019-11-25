@@ -9,7 +9,7 @@ function database() {
   const SchemaFarm = require('./SchemaFarm');
   const SendSw = require('./nbserver')
 
-  const API_PORT = 5004;
+  const API_PORT = 80;
   const app = express();
   app.use(cors());
   const router = express.Router();
