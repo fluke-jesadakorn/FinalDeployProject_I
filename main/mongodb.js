@@ -8,6 +8,7 @@ function database() {
   const logger = require('morgan');
   const SchemaFarm = require('./SchemaFarm');
   const SendSw = require('./nbserver')
+  const path = require('path');
 
   const API_PORT = 80;
   const app = express();
@@ -85,12 +86,12 @@ function database() {
   })
 
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname,"../client/build")))
-    app.get('*', function(req, res) {
+    app.use(express.static(path.join(__dirname, "../client/build")))
+    app.get('*', function (req, res) {
       res.sendFile(path.join(__dirname + '../client/build/index.html'));
     });
   }
-  
+
   // append /api for our http requests
   app.use('/api', router);
 
