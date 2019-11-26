@@ -16,7 +16,7 @@ function database() {
   const router = express.Router();
 
   // connects our back end code with the database
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm', { useNewUrlParser: true });
+  mongoose.connect('mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm', { useNewUrlParser: true });
 
   let db = mongoose.connection;
 
