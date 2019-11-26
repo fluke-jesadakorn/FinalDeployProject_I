@@ -10,13 +10,13 @@ function database() {
   const SendSw = require('./nbserver')
   const path = require('path');
 
-  const API_PORT = process.env.PORT || 80;
+  const PORT = process.env.PORT || 8080;
   const app = express();
   app.use(cors());
   const router = express.Router();
 
   // this is our MongoDB database
-  const dbRoute = MONGODB_URI ||
+  const dbRoute = process.env.MONGODB_URI ||
     'mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm';
 
   // connects our back end code with the database
@@ -86,9 +86,9 @@ function database() {
   })
 
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static("client/build"))
+    app.use(express.static("client/build/"))
     app.get('*', function (req, res) {
-      res.sendFile(path.join(__dirname + 'client', 'build', 'index.html'));
+      res.sendFile(path.resolve(__dirname + 'client', 'build', 'index.html'));
     });
   }
 
@@ -96,5 +96,5 @@ function database() {
   app.use('/api', router);
 
   // launch our backend into a port
-  app.listen(API_PORT, () => console.log(`MongoDB API Start On ${API_PORT}`));
+  app.listen(PORT, () => console.log(`MongoDB API Start On ${PORT}`));
 }
