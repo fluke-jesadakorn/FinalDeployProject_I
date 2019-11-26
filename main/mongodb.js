@@ -15,12 +15,8 @@ function database() {
   app.use(cors());
   const router = express.Router();
 
-  // this is our MongoDB database
-  const dbRoute = process.env.MONGODB_URI ||
-    'mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm';
-
   // connects our back end code with the database
-  mongoose.connect(dbRoute, { useNewUrlParser: true });
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://iflukej:Ff0813780670@smartfarm-euxel.gcp.mongodb.net/test?retryWrites=true&w=majority/SmartFarm', { useNewUrlParser: true });
 
   let db = mongoose.connection;
 
