@@ -20,10 +20,10 @@
     "socket.io": "^2.3.0"
   },
   "scripts": {
+    "start": "npm install && node 03_server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "npm start --prefix client",
     "server": "node 03_server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node 03_server.js"
-  },
-  "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
 }
