@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://nbsmartfarm.herokuapp.com"
+  "proxy": "http://localhost"
 }
