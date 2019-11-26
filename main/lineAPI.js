@@ -67,7 +67,7 @@ async function line() {
         }
 
         getLastData = async () => {
-            const get = await axios.get('http://localhost:5004/api/getData')
+            const get = await axios.get('/api/getData')
             console.log(await get.data[0].data)
             return await get.data[0].data
         }

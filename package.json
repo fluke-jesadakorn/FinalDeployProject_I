@@ -2,6 +2,10 @@
   "name": "smartfarm",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "main": "03_server.js",
   "dependencies": {
     "axios": "^0.19.0",
@@ -21,8 +25,5 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node 03_server.js"
   },
-  "engines": {
-    "node": "13.2.0"
-  },
-  "heroku-prebuild": "cd client && npm install && npm run build"
+  "heroku-postbuild": "cd client && npm install && npm run build"
 }

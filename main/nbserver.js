@@ -59,7 +59,7 @@ function listen() {
 			payload: rinfo.port
 		})
 		io.sockets.emit('nb', LineSw({ type: "getMoi" }))
-		axios.post("http://localhost:5004/api/addData", { data: LineSw({ type: "getMoi" }) })
+		axios.post("/api/addData", { data: LineSw({ type: "getMoi" }) })
 
 		// var ack = new Buffer("1")
 		// server.send(ack, 0, ack.length, rinfo.port, rinfo.address, function (err, bytes) {
